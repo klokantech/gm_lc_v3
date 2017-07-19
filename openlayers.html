@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>gm_lc_v3</title>
+<title>gm_lc_v3_z9</title>
 <meta http-equiv="imagetoolbar" content="no"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -20,11 +20,11 @@ body { width:100%; height:100%; background: #ffffff; }
 <script type="text/javascript">
 var mapExtent = ol.proj.transformExtent([-180.000000, -85.051129, 179.996547, 85.051129], 'EPSG:4326', 'EPSG:3857');
 var mapMinZoom = 0;
-var mapMaxZoom = 7;
+var mapMaxZoom = 8;
 var layer = new ol.layer.Tile({
   extent: mapExtent,
   source: new ol.source.XYZ({
-    attributions: [new ol.Attribution({html: 'gm_lc_v3'})],
+    attributions: [new ol.Attribution({html: 'gm_lc_v3_z9'})],
     url: "{z}/{x}/{y}.png",
     tilePixelRatio: 1.000000,
     minZoom: mapMinZoom,
@@ -45,6 +45,13 @@ var map = new ol.Map({
     center: ol.proj.fromLonLat([-0.001727, -0.000000]),
     zoom: 1
   })
+});
+
+map.on('precompose', function(evt) {
+  evt.context.imageSmoothingEnabled = false;
+  evt.context.webkitImageSmoothingEnabled = false;
+  evt.context.mozImageSmoothingEnabled = false;
+  evt.context.msImageSmoothingEnabled = false;
 });
 </script>
 </body>

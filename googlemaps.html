@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>gm_lc_v3</title>
+<title>gm_lc_v3_z9</title>
 <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
 <style type="text/css">
 html { overflow: hidden; }
@@ -26,16 +26,15 @@ body { background: #f4f4f4;}
 }
 </style>
 <![endif]-->
-<script type="text/javascript" src="https://maps.google.com/maps/api/js?sensor=false"></script>
 <!-- Get your Google Maps API Key: https://developers.google.com/maps/documentation/javascript/tutorials/adding-a-google-map#introduction-->
-<!-- <script type="text/javascript" src="https://maps.google.com/maps/api/js?key=YOUR_API_KEY&sensor=false"></script> -->
+<script type="text/javascript" src="https://maps.google.com/maps/api/js?key=AIzaSyDSBtdIdrkqGL0NQxFJHfZaItl6B0KQLDU&sensor=false"></script>
 <script type="text/javascript">
 var map;
 var mapBounds = new google.maps.LatLngBounds(
     new google.maps.LatLng(-85.051129, -180.000000),
     new google.maps.LatLng(85.051129, 179.996547));
 var mapMinZoom = 0;
-var mapMaxZoom = 7;
+var mapMaxZoom = 8;
 var maptiler = new google.maps.ImageMapType({
     getTileUrl: function(coord, zoom) { 
         var proj = map.getProjection();
